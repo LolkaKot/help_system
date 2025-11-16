@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расход товаров - Справочная система</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Учет расхода товаров</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="introduction.html">Введение</a></li>
+                    <li><a href="installation.html">Установка</a></li>
+                    <li><a href="users.html">Пользователи</a></li>
+                    <li><a href="suppliers.html">Поставщики</a></li>
+                    <li><a href="products.html">Товары</a></li>
+                    <li><a href="income.html">Приход</a></li>
+                    <li><a href="outcome.html" class="active">Расход</a></li>
+                    <li><a href="reports.html">Отчеты</a></li>
+                    <li><a href="backup.html">Резервное копирование</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="content-section">
+                <h2>Расходные операции</h2>
+                <p>Модуль учета расхода товаров предназначен для оформления продаж, списания товаров и формирования расходных накладных. Система автоматически уменьшает складские остатки при проведении расходных операций.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🛒 Оформление продаж</h4>
+                        <p>Быстрое создание расходных накладных для клиентов.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>👥 Учет клиентов</h4>
+                        <p>Фиксация информации о покупателях.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>📊 Контроль остатков</h4>
+                        <p>Автоматическая проверка доступности товаров.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>💰 Расчет выручки</h4>
+                        <p>Автоматический расчет сумм продаж.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Создание расходной накладной</h2>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>Перейдите в раздел "Расход" через боковую панель навигации.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Нажмите кнопку "Создать расходную накладную".</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Заполните общую информацию:</p>
+                    <ul>
+                        <li><strong>Номер накладной</strong> - уникальный идентификатор</li>
+                        <li><strong>Клиент</strong> - ФИО или название организации</li>
+                        <li><strong>Дата накладной</strong> - дата продажи</li>
+                    </ul>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 4:</span>
+                    <p>Добавьте товары в накладную:</p>
+                    <ul>
+                        <li>Выберите товар из справочника</li>
+                        <li>Укажите количество (проверяется доступность)</li>
+                        <li>Введите цену продажи</li>
+                        <li>Нажмите "Добавить в накладную"</li>
+                    </ul>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 5:</span>
+                    <p>Проверьте правильность данных и общую сумму.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 6:</span>
+                    <p>Нажмите кнопку "Сохранить накладную".</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Контроль остатков при продаже</h2>
+                
+                <div class="warning">
+                    <strong>Важно!</strong> Система не позволяет продать больше товара, чем есть в наличии на складе.
+                </div>
+                
+                <h3>Процесс контроля:</h3>
+                <ul>
+                    <li>При добавлении товара проверяется текущий остаток</li>
+                    <li>Если количество превышает остаток - выводится предупреждение</li>
+                    <li>Накладная не может быть сохранена при недостатке товара</li>
+                    <li>После сохранения накладной остатки автоматически уменьшаются</li>
+                </ul>
+            </section>
+            
+            <section class="content-section">
+                <h2>Учет клиентов</h2>
+                <p>При создании расходной накладной можно указать информацию о клиенте:</p>
+                
+                <ul>
+                    <li><strong>Физическое лицо</strong> - ФИО покупателя</li>
+                    <li><strong>Юридическое лицо</strong> - название организации</li>
+                    <li><strong>Контактные данные</strong> - телефон, email (опционально)</li>
+                </ul>
+                
+                <div class="note">
+                    <strong>Примечание:</strong> В текущей версии система не ведет отдельную базу клиентов, информация сохраняется только в накладной.
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Цены продажи</h2>
+                
+                <h3>Настройка цен:</h3>
+                <ul>
+                    <li>Цены по умолчанию берутся из карточки товара</li>
+                    <li>Возможность ручной корректировки цены при продаже</li>
+                    <li>Фиксация фактической цены продажи в накладной</li>
+                    <li>История изменения цен для анализа</li>
+                </ul>
+                
+                <div class="note">
+                    <strong>Рекомендация:</strong> Регулярно обновляйте цены в карточках товаров для корректной работы системы.
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Просмотр истории продаж</h2>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>Перейдите в раздел "Расход".</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Система отобразит список всех расходных накладных.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Для просмотра деталей нажмите на соответствующую строку.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 4:</span>
+                    <p>Используйте фильтры для поиска по дате, клиенту или номеру.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Отмена продаж</h2>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>В списке накладных найдите нужный документ.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Нажмите кнопку "Аннулировать".</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Подтвердите отмену накладной.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 4:</span>
+                    <p>Система автоматически вернет товары на склад.</p>
+                </div>
+                
+                <div class="warning">
+                    <strong>Внимание!</strong> Отмена продажи возможна только для накладных текущего дня. Для более старых накладных создавайте возвратные накладные.
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Решение часто задаваемых вопросов</h2>
+                
+                <h3>Проблема: Недостаточно товара на складе</h3>
+                <p><strong>Решение:</strong> Уменьшите количество в накладной или дождитесь поступления товара от поставщика.</p>
+                
+                <h3>Проблема: Цена продажи не соответствует карточке товара</h3>
+                <p><strong>Решение:</strong> Проверьте актуальность цен в справочнике товаров. При необходимости скорректируйте цену вручную.</p>
+                
+                <h3>Проблема: Ошибка при сохранении накладной</h3>
+                <p><strong>Решение:</strong> Убедитесь, что заполнены все обязательные поля и добавлена хотя бы одна позиция товара.</p>
+            </section>
+            
+            <div class="page-nav">
+                <a href="income.html">&larr; Приход</a>
+                <a href="reports.html">Отчеты &rarr;</a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 АИС Компьютерный салон. Версия 1.0</p>
+        </footer>
+    </div>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>

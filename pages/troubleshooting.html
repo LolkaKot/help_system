@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение проблем - Справочная система</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Решение проблем и неисправностей</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="introduction.html">Введение</a></li>
+                    <li><a href="installation.html">Установка</a></li>
+                    <li><a href="users.html">Пользователи</a></li>
+                    <li><a href="suppliers.html">Поставщики</a></li>
+                    <li><a href="products.html">Товары</a></li>
+                    <li><a href="income.html">Приход</a></li>
+                    <li><a href="outcome.html">Расход</a></li>
+                    <li><a href="reports.html">Отчеты</a></li>
+                    <li><a href="backup.html">Резервное копирование</a></li>
+                    <li><a href="troubleshooting.html" class="active">Решение проблем</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="content-section">
+                <h2>Частые проблемы и решения</h2>
+                <p>В этом разделе собраны решения для наиболее распространенных проблем, которые могут возникнуть при работе с АИС "Компьютерный салон".</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🚫 Проблемы запуска</h4>
+                        <p>Программа не запускается или выдает ошибки при старте.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>🔐 Проблемы доступа</h4>
+                        <p>Ошибки авторизации и проблемы с правами пользователей.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>💾 Проблемы с данными</h4>
+                        <p>Ошибки работы с базой данных и целостностью информации.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>⚡ Производительность</h4>
+                        <p>Медленная работа программы и проблемы с откликом интерфейса.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Проблемы запуска программы</h2>
+                
+                <h3>Ошибка: "ModuleNotFoundError: No module named 'flet'"</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Установите необходимые зависимости:</p>
+                    <pre><code>pip install flet</code></pre>
+                </div>
+                
+                <h3>Ошибка: "Python not found"</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Убедитесь, что Python установлен и добавлен в PATH:</p>
+                    <pre><code>python --version</code></pre>
+                    <p>Если команда не работает, переустановите Python с опцией "Add Python to PATH".</p>
+                </div>
+                
+                <h3>Ошибка: "Access is denied"</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Запустите программу от имени администратора или проверьте права доступа к папке с программой.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Проблемы авторизации</h2>
+                
+                <h3>Ошибка: "Неверный логин или пароль"</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Используйте учетные данные по умолчанию:</p>
+                    <ul>
+                        <li>Логин: <code>admin</code></li>
+                        <li>Пароль: <code>admin</code></li>
+                    </ul>
+                    <p>Если не помогло, проверьте базу данных напрямую:</p>
+                    <pre><code>sqlite3 computer_store.db
+SELECT * FROM users;</code></pre>
+                </div>
+                
+                <h3>Ошибка: "Нет прав доступа"</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Обратитесь к администратору системы для предоставления необходимых прав доступа.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Проблемы с базой данных</h2>
+                
+                <h3>Ошибка: "database is locked"</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Закройте все экземпляры программы и перезапустите. Если проблема persists, перезагрузите компьютер.</p>
+                </div>
+                
+                <h3>Ошибка: "disk I/O error"</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Проверьте свободное место на диске. Если место есть, возможно повреждение базы данных - восстановите из резервной копии.</p>
+                </div>
+                
+                <h3>Ошибка: "no such table"</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Удалите файл computer_store.db и перезапустите программу. Система автоматически создаст новую базу данных с правильной структурой.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Проблемы с производительностью</h2>
+                
+                <h3>Программа работает медленно</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Выполните следующие действия:</p>
+                    <ul>
+                        <li>Закройте ненужные приложения</li>
+                        <li>Увеличьте объем оперативной памяти</li>
+                        <li>Проверьте компьютер на вирусы</li>
+                        <li>Очистите временные файлы</li>
+                    </ul>
+                </div>
+                
+                <h3>Долгая загрузка данных</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Выполните оптимизацию базы данных:</p>
+                    <pre><code>sqlite3 computer_store.db "VACUUM;"</code></pre>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Проблемы с приходными и расходными накладными</h2>
+                
+                <h3>Невозможно сохранить накладную</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Проверьте:</p>
+                    <ul>
+                        <li>Заполнены все обязательные поля</li>
+                        <li>Добавлена хотя бы одна позиция товара</li>
+                        <li>Количество товара не превышает остаток (для расходных накладных)</li>
+                        <li>Цены указаны корректно</li>
+                    </ul>
+                </div>
+                
+                <h3>Неверные остатки товаров</h3>
+                <div class="step">
+                    <span class="step-number">Решение:</span>
+                    <p>Выполните пересчет остатков:</p>
+                    <pre><code>-- Создайте резервную копию перед выполнением
+-- Обновите остатки на основе приходных и расходных накладных</code></pre>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Восстановление базы данных</h2>
+                
+                <h3>Ручное восстановление</h3>
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>Создайте резервную копию поврежденной базы данных.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Попробуйте восстановить базу с помощью утилиты SQLite:</p>
+                    <pre><code>sqlite3 computer_store.db ".dump" | sqlite3 new_database.db</code></pre>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Если не помогло, восстановите из последней резервной копии.</p>
+                </div>
+                
+                <h3>Автоматическое восстановление</h3>
+                <div class="step">
+                    <span class="step-number">Действие:</span>
+                    <p>Используйте функцию восстановления из раздела "Резервное копирование".</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Журналирование ошибок</h2>
+                <p>Для диагностики сложных проблем включите ведение журнала ошибок:</p>
+                
+                <div class="step">
+                    <span class="step-number">Включение логов:</span>
+                    <p>Добавьте в код программы перед запуском:</p>
+                    <pre><code>import logging
+logging.basicConfig(level=logging.DEBUG, 
+                    format='%(asctime)s - %(levelname)s - %(message)s',
+                    filename='app.log')</code></pre>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Анализ логов:</span>
+                    <p>Проверьте файл app.log в папке с программой для получения подробной информации об ошибках.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Профилактика проблем</h2>
+                
+                <h3>Регулярное обслуживание:</h3>
+                <ul>
+                    <li>Создавайте резервные копии ежедневно</li>
+                    <li>Проверяйте целостность базы данных раз в неделю</li>
+                    <li>Обновляйте программу до последней версии</li>
+                    <li>Очищайте временные файлы</li>
+                </ul>
+                
+                <h3>Мониторинг системы:</h3>
+                <ul>
+                    <li>Контролируйте свободное место на диске</li>
+                    <li>Следите за использованием оперативной памяти</li>
+                    <li>Проверяйте журналы ошибок</li>
+                    <li>Тестируйте восстановление из резервных копий</li>
+                </ul>
+            </section>
+            
+            <section class="content-section">
+                <h2>Обращение в техническую поддержку</h2>
+                <p>Если вы не смогли решить проблему самостоятельно, обратитесь в техническую поддержку.</p>
+                
+                <h3>Подготовьте следующую информацию:</h3>
+                <ul>
+                    <li>Версия программы</li>
+                    <li>Операционная система</li>
+                    <li>Текст ошибки (скриншот или копия)</li>
+                    <li>Действия, приводящие к ошибке</li>
+                    <li>Файл логов (app.log)</li>
+                </ul>
+                
+                <h3>Контакты поддержки:</h3>
+                <ul>
+                    <li>Email: support@computerstore.ru</li>
+                    <li>Телефон: +7 (XXX) XXX-XX-XX</li>
+                    <li>Часы работы: Пн-Пт 9:00-18:00</li>
+                </ul>
+            </section>
+            
+            <div class="page-nav">
+                <a href="backup.html">&larr; Резервное копирование</a>
+                <a href="../index.html">Главная &rarr;</a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 АИС Компьютерный салон. Версия 1.0</p>
+        </footer>
+    </div>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>

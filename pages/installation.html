@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установка - Справочная система</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Установка и настройка</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="introduction.html">Введение</a></li>
+                    <li><a href="installation.html" class="active">Установка</a></li>
+                    <li><a href="users.html">Пользователи</a></li>
+                    <li><a href="suppliers.html">Поставщики</a></li>
+                    <li><a href="products.html">Товары</a></li>
+                    <li><a href="income.html">Приход</a></li>
+                    <li><a href="outcome.html">Расход</a></li>
+                    <li><a href="reports.html">Отчеты</a></li>
+                    <li><a href="backup.html">Резервное копирование</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="content-section">
+                <h2>Подготовка к установке</h2>
+                <p>Перед установкой АИС "Компьютерный салон" убедитесь, что на вашем компьютере установлен Python версии 3.8 или выше.</p>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>Проверьте установленную версию Python:</p>
+                    <pre><code>python --version
+# или
+python3 --version</code></pre>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Если Python не установлен, скачайте его с официального сайта:</p>
+                    <p><a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a></p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Установка системы</h2>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>Скачайте архив с программой или склонируйте репозиторий.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Распакуйте архив в выбранную директорию.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Установите необходимые зависимости. Откройте командную строку в папке с программой и выполните:</p>
+                    <pre><code>pip install flet</code></pre>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 4:</span>
+                    <p>Запустите программу:</p>
+                    <pre><code>python main.py</code></pre>
+                </div>
+                
+                <div class="note">
+                    <strong>Примечание:</strong> На Windows может потребоваться использовать <code>python</code> вместо <code>python3</code>.
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Первоначальная настройка</h2>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>При первом запуске система автоматически создаст базу данных и таблицы.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Для входа в систему используйте учетные данные администратора по умолчанию:</p>
+                    <ul>
+                        <li><strong>Логин:</strong> admin</li>
+                        <li><strong>Пароль:</strong> admin</li>
+                    </ul>
+                </div>
+                
+                <div class="warning">
+                    <strong>Важно!</strong> Сразу после первого входа смените пароль администратора для обеспечения безопасности.
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Система автоматически создаст базовые категории товаров:</p>
+                    <ul>
+                        <li>Компьютеры</li>
+                        <li>Ноутбуки</li>
+                        <li>Комплектующие</li>
+                        <li>Периферия</li>
+                        <li>Программное обеспечение</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Структура файлов</h2>
+                <p>После установки в рабочей директории будут созданы следующие файлы:</p>
+                
+                <pre><code>computer_store/
+├── main.py              # Основной файл программы
+├── computer_store.db    # База данных (создается автоматически)
+├── requirements.txt     # Список зависимостей
+└── backup/             # Папка для резервных копий (создается автоматически)</code></pre>
+            </section>
+            
+            <section class="content-section">
+                <h2>Решение проблем при установке</h2>
+                
+                <h3>Проблема: Ошибка "ModuleNotFoundError"</h3>
+                <p><strong>Решение:</strong> Убедитесь, что все зависимости установлены правильно:</p>
+                <pre><code>pip install flet sqlite3 datetime os json</code></pre>
+                
+                <h3>Проблема: Ошибка доступа к базе данных</h3>
+                <p><strong>Решение:</strong> Проверьте права доступа к папке с программой. Запустите программу от имени администратора.</p>
+                
+                <h3>Проблема: Программа не запускается</h3>
+                <p><strong>Решение:</strong> Убедитесь, что используется корректная версия Python. Проверьте путь к интерпретатору.</p>
+            </section>
+            
+            <section class="content-section">
+                <h2>Обновление системы</h2>
+                <p>Для обновления системы до новой версии:</p>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>Создайте резервную копию базы данных.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Остановите работающую программу.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Замените файлы программы на новые версии.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 4:</span>
+                    <p>Запустите программу. Система автоматически обновит структуру базы данных при необходимости.</p>
+                </div>
+            </section>
+            
+            <div class="page-nav">
+                <a href="introduction.html">&larr; Введение</a>
+                <a href="users.html">Пользователи &rarr;</a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 АИС Компьютерный салон. Версия 1.0</p>
+        </footer>
+    </div>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>
+

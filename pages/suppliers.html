@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поставщики - Справочная система</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Управление поставщиками</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="introduction.html">Введение</a></li>
+                    <li><a href="installation.html">Установка</a></li>
+                    <li><a href="users.html">Пользователи</a></li>
+                    <li><a href="suppliers.html" class="active">Поставщики</a></li>
+                    <li><a href="products.html">Товары</a></li>
+                    <li><a href="income.html">Приход</a></li>
+                    <li><a href="outcome.html">Расход</a></li>
+                    <li><a href="reports.html">Отчеты</a></li>
+                    <li><a href="backup.html">Резервное копирование</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="content-section">
+                <h2>База данных поставщиков</h2>
+                <p>Модуль управления поставщиками позволяет вести полную базу данных компаний-поставщиков компьютерной техники и комплектующих.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🏢 Информация о компании</h4>
+                        <p>Полные реквизиты и контактные данные поставщиков.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>👤 Контактные лица</h4>
+                        <p>Учет ответственных лиц и менеджеров поставщиков.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>📞 Средства связи</h4>
+                        <p>Телефоны, email и другие контакты для оперативной связи.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>📊 История поставок</h4>
+                        <p>Автоматический учет всех приходных операций по поставщику.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Добавление нового поставщика</h2>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>Перейдите в раздел "Поставщики" через боковую панель навигации.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Нажмите кнопку "Добавить поставщика".</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Заполните форму данными поставщика:</p>
+                    <ul>
+                        <li><strong>Название*</strong> - официальное наименование компании</li>
+                        <li><strong>Контактное лицо</strong> - ФИО ответственного менеджера</li>
+                        <li><strong>Телефон</strong> - контактный телефон</li>
+                        <li><strong>Email</strong> - электронная почта</li>
+                        <li><strong>Адрес</strong> - юридический или фактический адрес</li>
+                    </ul>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 4:</span>
+                    <p>Нажмите кнопку "Сохранить".</p>
+                </div>
+                
+                <div class="note">
+                    <strong>Примечание:</strong> Поле "Название" является обязательным для заполнения.
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Редактирование информации о поставщике</h2>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>В списке поставщиков найдите нужную компанию.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Нажмите кнопку "Редактировать" (иконка карандаша) в строке поставщика.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Внесите необходимые изменения в форму.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 4:</span>
+                    <p>Нажмите кнопку "Сохранить".</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Удаление поставщика</h2>
+                
+                <div class="warning">
+                    <strong>Внимание!</strong> Удаление поставщика невозможно, если с ним связаны приходные накладные. В таких случаях рекомендуется отметить поставщика как неактивного.
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 1:</span>
+                    <p>В списке поставщиков найдите компанию для удаления.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 2:</span>
+                    <p>Нажмите кнопку "Удалить" (иконка корзины).</p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">Шаг 3:</span>
+                    <p>Подтвердите удаление в диалоговом окне.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Поиск и фильтрация поставщиков</h2>
+                
+                <h3>Поиск по названию:</h3>
+                <p>Используйте поле поиска для быстрого нахождения поставщика по названию компании.</p>
+                
+                <h3>Фильтрация по активности:</h3>
+                <p>В текущей версии фильтрация доступна через прямое редактирование базы данных.</p>
+                
+                <h3>Сортировка:</h3>
+                <p>Поставщики автоматически сортируются по названию компании в алфавитном порядке.</p>
+            </section>
+            
+            <section class="content-section">
+                <h2>История сотрудничества</h2>
+                <p>Для каждого поставщика система автоматически ведет историю приходных накладных:</p>
+                
+                <ul>
+                    <li>Общее количество поставок</li>
+                    <li>Суммарный объем поставок</li>
+                    <li>Дата последней поставки</li>
+                    <li>Средняя периодичность поставок</li>
+                </ul>
+                
+                <div class="note">
+                    <strong>Примечание:</strong> Подробная аналитика по поставщикам доступна в разделе "Отчеты".
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>Рекомендации по ведению базы поставщиков</h2>
+                
+                <h3>Качество данных:</h3>
+                <ul>
+                    <li>Регулярно обновляйте контактную информацию</li>
+                    <li>Указывайте актуальные телефоны и email</li>
+                    <li>Добавляйте полные юридические наименования</li>
+                    <li>Ведите историю смены контактных лиц</li>
+                </ul>
+                
+                <h3>Организация работы:</h3>
+                <ul>
+                    <li>Группируйте поставщиков по категориям товаров</li>
+                    <li>Отмечайте основных и резервных поставщиков</li>
+                    <li>Ведите рейтинг надежности поставщиков</li>
+                    <li>Регулярно проводите сверку данных</li>
+                </ul>
+            </section>
+            
+            <section class="content-section">
+                <h2>Экспорт данных о поставщиках</h2>
+                <p>В текущей версии экспорт данных доступен через:</p>
+                
+                <ul>
+                    <li>Прямой доступ к базе данных SQLite</li>
+                    <li>Использование SQL-запросов для выгрузки</li>
+                    <li>Ручное копирование данных из интерфейса</li>
+                </ul>
+                
+                <div class="note">
+                    <strong>Пример SQL-запроса для экспорта:</strong>
+                    <pre><code>SELECT * FROM suppliers ORDER BY name;</code></pre>
+                </div>
+            </section>
+            
+            <div class="page-nav">
+                <a href="users.html">&larr; Пользователи</a>
+                <a href="products.html">Товары &rarr;</a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 АИС Компьютерный салон. Версия 1.0</p>
+        </footer>
+    </div>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>
